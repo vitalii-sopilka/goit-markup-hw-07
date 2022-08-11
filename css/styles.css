@@ -221,7 +221,7 @@ background-color: var(--color-hover);
 /* ----------НАШИ ПРИИМЦЩЕСТВА---------- */
 
 /* Скрытый заголовок */
-.title-hide {
+.visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -490,21 +490,21 @@ border-color: var(--color-accent);
 
 /* ----------Портфолио---------- */
 
-.filter {
+.portfolio {
   padding: 94px 0;
 }
 
-.btns {
+.portfolio__nav {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.btns-item + .btns-item {
+.portfolio__nav-item + .portfolio__nav-item {
   margin-left: 10px;
 }
 
-.btns-item-klick {
+.portfolio__button {
   font-family: Inherit;
   font-weight: 500;
   font-size: 16px;  
@@ -512,7 +512,6 @@ border-color: var(--color-accent);
   letter-spacing: 0.03em;
   color: var(--color-header);
   background-color: var(--color-team);
-  cursor: pointer;
   text-align: center;
   border: 0;
   border-radius: 4px;
@@ -529,8 +528,8 @@ border-color: var(--color-accent);
   background-color: var(--color-accent);
 }
 
-.btns-item-klick:hover,
-.btns-item-klick:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
   box-shadow: var(--shadows);
   background-color: var(--color-accent);
   color: var(--color-white);
@@ -538,47 +537,47 @@ border-color: var(--color-accent);
 
 /* Карточки в портфолио */
 
-.portfolio-list {
+.projects__list {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
 }
 
-.portfolio-list-item {
+.projects__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
 }
 
-.portfolio-list-item-link {
+.projects__link {
   display: block;
   transition: box-shadow var(--transition-time) var(--cubic-function);
 } 
 
-.portfolio-list-item-link:hover,
-.portfolio-list-item-link:focus {
+.projects__link:hover,
+.projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-list-item-link:hover .description-wrapper,
-.portfolio-list-item-link:focus .description-wrapper {
+.projects__link:hover .projects__description-wrapper,
+.pprojects__link:focus .projects__description-wrapper {
   transform: translateY(0);
 }
 
-.project-figure {
+.projects__figure {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-list-item-images {
+.projects__item-images {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.description-wrapper {
+.projects__description-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -591,28 +590,28 @@ border-color: var(--color-accent);
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.project-description {
+.projects__description {
   width: 322px;
   font-size: 18px;
   line-height: 1.56;
   color: var(--color-white);
 }
 
-.portfolio-list-item-content {
+.projects__content {
   padding: 20px 24px;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
 }
 
-.portfolio-list-item-title {
+.projects__title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--color-header);
 }
 
-.portfolio-list-item-description {
+.projects__item-description {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
@@ -804,12 +803,12 @@ border-color: var(--color-accent);
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal-window {
+.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
 
 /* Модальное окно */
-.modal-window {
+.modal {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -824,7 +823,7 @@ border-color: var(--color-accent);
 }
 
 /* Кнопка закрытия модального окна */
-.button.close {
+.modal__close {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -840,19 +839,18 @@ border-color: var(--color-accent);
   border-color var(--transition-time) var(--cubic-function);
 }
 
-.button.close:hover,
-.button.close:focus {
+.modal__close:hover, .modal__close:focus {
   color: var(--color-accent);
   outline: transparent;
   border-color: var(--color-accent);
 }
 
-.close-icon {
+.modal__close-icon {
   fill: currentColor;
 }
 
 /* Заголовок модального окна */
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -863,14 +861,14 @@ border-color: var(--color-accent);
 }
 
 /* Форма */
-.modal-form {
+.form {
   display: flex;
   flex-direction: column;
   color: var(--color-white);
   margin-top: 12px;
 }
 
-.modal-label {
+.form__label {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -881,18 +879,26 @@ border-color: var(--color-accent);
   color: var(--color-gray);
 }
 
-.modal-label:not(:first-child) {
+.form__label:not(:first-child) {
   margin-top: 10px;
 }
 
-.modal-input {
+.form__label:hover .form__input, .form__label:hover .form__comment {
+  border-color: var(--color-accent);
+}
+
+.form__label:hover .form__input-icon {
+  fill: var(--color-accent);
+}
+
+.form__input-wrapper {
   display: inline-block;
   position: relative;
   color: var(--color-header);
   margin-top: 4px;
 }
 
-.input-field {
+.form__input {
   width: 100%;
   height: 40px;
   padding: 12px 42px;
@@ -902,32 +908,24 @@ border-color: var(--color-accent);
   transition: border-color var(--transition-time) var(--cubic-function);
 }
 
-.input-icon {
+.form__input:focus {
+  border-color: var(--color-accent);
+}
+
+.form__input:focus + .form__input-icon {
+  fill: var(--color-accent);
+}
+
+.form__input-icon {
   position: absolute;
-  left: 12px;
   top: 50%;
+  left: 12px;
   transform: translateY(-50%);
   fill: currentColor;
   transition: fill var(--transition-time) var(--cubic-function);
 }
 
-.modal-label:hover .input-field,
-.modal-label:hover .comment-area {
-  border-color: var(--color-accent);
-}
-
-.input-field:focus,
-.comment-area:focus {
-  border-color: var(--color-accent);
-  outline: transparent;
-}
-
-.modal-label:hover .input-icon,
-.input-field:focus + .input-icon {
-  fill: var(--color-accent);
-}
-
-.comment-area {
+.form__comment {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -937,7 +935,7 @@ border-color: var(--color-accent);
   margin-top: 4px;
 }
 
-.comment-area::placeholder {
+.form__comment::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -945,62 +943,80 @@ border-color: var(--color-accent);
   color: var(--modal-placeholder-color);
 }
 
+.form__comment:focus {
+  border-color: var(--color-accent);
+}
+
 .agreement {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  text-decoration: underline;
 }
 
-.check-icon {
-  display: inline-flex;
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-  background-image: url(../images/check-disable.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border: none;
-  transition: background-image var(--transition-time) var(--cubic-function);
+.check:hover .check__icon--focus {
+  opacity: 1;
 }
 
-.check-input:hover + .check-icon,
-.check-input:focus + .check-icon {
-  border: 2px solid var(--color-accent);
-  border-radius: 2px;
-  background-image: none;
+.check__input {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
 }
 
-.check-input:checked + .check-icon {
-  border: none;
-  background-image: url(../images/check-active.svg);
+.check__input:focus ~ .check__icon--focus {
+  opacity: 1;
 }
 
-.agreement-text {
+.check__input:checked ~ .check__icon--active {
+  opacity: 1;
+}
+
+.check__icon--disable {
+  opacity: 1;
+}
+
+.check__icon--active {
+  position: absolute;
+  left: 11px;
+  opacity: 0;
+  transition: opacity var(--transition-time) var(--cubic-function);
+}
+
+.check__icon--focus {
+  position: absolute;
+  left: 11px;
+  opacity: 0;
+  transition: opacity var(--transition-time) var(--cubic-function);
+}
+
+.agreement__text {
+  margin-left: 7px;
   font-size: 14px;
   line-height: 1.71;
   color: var(--color-gray);
 }
 
-.agreement-link {
+.agreement__link {
+  display: inline;
+  text-decoration: underline;
   color: var(--color-accent);
   outline-color: transparent;
   transition: outline-color var(--transition-time) var(--cubic-function);
 }
 
-.agreement-link:focus {
+.agreement__link:focus {
   outline-color: var(--color-accent);
 }
 
-.submit-button {
+.modal__submit {
   align-self: center;
   width: 200px;
   height: 50px;
   border-radius: 4px;
-  box-shadow: var(--shadows);
-  color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  color: var(--color-white);
   background-color: var(--color-hover);
   border: 0;
   font-weight: 700;

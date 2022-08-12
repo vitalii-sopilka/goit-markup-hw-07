@@ -1,0 +1,114 @@
+:root {
+  --color-header: #212121;
+  --color-accent: #2196f3;
+  --color-hover: #188ce8;
+  --color-black: #000000;
+  --color-gray: #757575;
+  --color-white: #ffffff;
+  --color-team: #f5f4fa;
+  --color-footer: #2f303a;
+  --color-alpha: rgba(255, 255, 255, 0.6);
+  --color-icon: #afb1B8;
+  --shadows: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --transition-time: 250ms;
+  --cubic-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --modal-border-color: rgba(33, 33, 33, 0.2);
+  --modal-placeholder-color: rgba(117, 117, 117, 0.5);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-white);
+}
+
+/* Доп. класс для снятия дефолтных подчеркиваний со ссылок */
+.link {
+  text-decoration: none
+}
+
+/* Доп. класс для удаления точек, марджинов и паддингов у элементов списка */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Сброс марджинов для абзацев и заголовков */
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ---------ПОСТОЯННЫЕ КЛИЕНТЫ---------- */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: center;
+}
+
+.clients__title {
+  margin-bottom: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  color: var(--color-header);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.clients__list {
+  display: flex;
+}
+
+.clients__item + .clients__item {
+  margin-left: 30px;
+}
+
+.clients__link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-icon) ;
+  border-radius: 4px;
+  color: var(--color-icon);
+  outline: transparent;
+  transition: color var(--transition-time) var(--cubic-function),
+    border-color var(--transition-time) var(--cubic-function);
+}
+
+.clients__icon {
+  display: flex;
+  fill: currentColor;
+}
+
+.clients__link:hover,
+.clients__link:focus {
+color: var(--color-accent);
+border-color: var(--color-accent);
+}
+
+.clients__link:hover .clients__icon,
+.clients__link:focus .clients__icon {
+  fill: var(--color-accent);
+}

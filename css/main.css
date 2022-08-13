@@ -470,7 +470,6 @@ body {
 .doing {
   padding-bottom: 94px;
 }
-
 .doing__title {
   margin-bottom: 50px;
   font-size: 36px;
@@ -479,23 +478,15 @@ body {
   letter-spacing: 0.03em;
   color: var(--color-header);
 }
-
 .doing__list {
   display: flex;
 }
-
 .doing__item {
   position: relative;
 }
-
 .doing__item:not(:last-child) {
   margin-right: 30px;
 }
-
-/* 2й вариант */
-/* .doing__item + .doing__item{
-  margin-left: 30px;
-} */
 .doing__description {
   display: flex;
   justify-content: center;

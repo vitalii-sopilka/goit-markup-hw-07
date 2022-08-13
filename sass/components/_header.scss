@@ -1,71 +1,56 @@
 .header {
   border-bottom: 1px solid #ececec;
   align-items: center;
-}
-
-.header .container {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  .container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__logo {
   color: var(--color-black);
   padding: 24px 0 25px 0;
   margin-right: 93px;
-}
-
-.header__logo--span {
-  color: var(--color-accent);
+  &--span {
+    color: var(--color-accent);
+  }
 }
 
 .site-nav {
   display: flex;
-}
-
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav__link {
-  padding: 32px 0;
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--color-header);
-  position: relative;
-  transition: color var(--transition-time) var(--cubic-function);
-}
-
-.site-nav__link:hover,
-.site-nav__link:focus {
-  color: var(--color-accent);
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__link {
+    padding: 32px 0;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--color-header);
+    position: relative;
+    transition: color var(--transition-time) var(--cubic-function);
+      &:hover,
+      &:focus {
+        color: var(--color-accent);
+      }
 }
 
 /* Подсветка текущей страницы */
 .site-nav__link--current {
   color: var(--color-accent);
-}
-
-.site-nav__link--current::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -2%;
-  width: 100%;
-  height: 4px;
-  background-color: var(--color-accent);
-  border-radius: 2px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2%;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+  }
 }
 
 /* Контакты */
@@ -74,10 +59,9 @@
   display: flex;
   margin-left: auto;
   align-items: center;
-}
-
-.header-contacts__item:not(:last-child) {
-  margin-right: 50px;
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .header-contacts__link {
@@ -90,11 +74,10 @@
   letter-spacing: 0.02em;
   color: var(--color-gray);
   transition: color var(--transition-time) var(--cubic-function);
-}
-
-.header-contacts__link:focus,
-.header-contacts__link:hover {
-  color: var(--color-accent);
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+    }
 }
 
 .header-contacts__icon {

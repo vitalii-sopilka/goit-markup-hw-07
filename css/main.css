@@ -402,35 +402,21 @@ body {
   background-color: var(--color-hover);
 }
 
-/* Скрытый заголовок */
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
 .benefits {
   background-color: var(--color-white);
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .benefits__list {
   display: flex;
   justify-content: space-between;
 }
-
 .benefits__item {
   flex-basis: calc((100% - 90px) / 4);
 }
-
+.benefits__item:not(:last-child) {
+  margin-right: 30px;
+}
 .benefits__content {
   display: flex;
   width: 270px;
@@ -441,11 +427,6 @@ body {
   border-radius: 4px;
   margin-bottom: 30px;
 }
-
-.benefits__item + .benefits__item {
-  margin-left: 30px;
-}
-
 .benefits__title {
   margin-bottom: 10px;
   font-size: 14px;
@@ -454,14 +435,12 @@ body {
   text-transform: uppercase;
   color: var(--color-header);
 }
-
 .benefits__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-gray);
 }
-
 .benefits__icon {
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));

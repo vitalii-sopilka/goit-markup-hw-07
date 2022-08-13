@@ -48,15 +48,16 @@
 
 .footer-contacts {
   &__link {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--color-alpha);
-  transition: color var(--transition-time) var(--cubic-function);
-    &:hover,
-    &:focus {
-      color: var(--color-accent);
-    }
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--color-alpha);
+    transition: color var(--transition-time) var(--cubic-function);
+      &:hover,
+      &:focus {
+        color: var(--color-accent);
+      }
+  }
   &__item:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -112,13 +113,10 @@
 /* ПОДПИШИТЕСЬ НА РАССЫЛКУ */
 
 .subscribe {
-  .label {
-  width: 358px;
-  margin-right: 12px;
+  &__label {
+    width: 358px;
+    margin-right: 12px;
   }
-}
-
-.subscribe {
   &__form {
     display: flex;
     align-items: flex-end;

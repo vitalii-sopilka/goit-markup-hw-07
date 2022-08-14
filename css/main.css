@@ -842,6 +842,9 @@ a, img {
 .projects__link:hover, .projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.projects__link:hover .projects__link__description-wrapper, .projects__link:focus .projects__link__description-wrapper {
+  transform: translateY(0);
+}
 .projects__figure {
   position: relative;
   overflow: hidden;
@@ -876,19 +879,14 @@ a, img {
   border-right: 1px solid #EEEEEE;
 }
 .projects__title {
+  color: var(--color-header);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--color-head);
 }
 .projects__item-description {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--color-gray);
-}
-
-.projects__link:hover .projects__description-wrapper,
-.projects__link:focus .projects__description-wrapper {
-  transform: translateY(0);
 }/*# sourceMappingURL=main.css.map */

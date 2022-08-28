@@ -38,7 +38,7 @@
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 16px;
-    color: var(--color-gray);   
+    color: var(--color-gray);
   }
   &__soc-list {
     display: flex;
@@ -56,14 +56,16 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    color: #afb1b8;
-    transition: color var(--transition-time) var(--cubic-function),
-    background-color var(--transition-time) var(--cubic-function);
+    color: var(--color-icon)
+    transition: color var(--transition-time) var(--cubic-function), background-color var(--transition-time) var(--cubic-function);
     &:hover,
     &:focus {
       color: var(--color-white);
       background-color: var(--color-accent);
     }
+  }
+  &__soc-icon {
+    fill: currentColor
   }
 }
 
@@ -73,8 +75,4 @@
 
 .team__soc-item:first-child {
   margin-left: 0;
-}
-
-.team__soc-icon {
-  fill: currentColor
 }
